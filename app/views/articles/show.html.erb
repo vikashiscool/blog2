@@ -1,5 +1,16 @@
-<h1>Title: <%= @article.title %></h1>
+`<h1>Title: <%= @article.title %></h1>
+<p><%= @article.title %></p>
+
+<h1>Text:</h1>
 <p><%= @article.text %></p>
+
+<h2>Comments</h2>
+<%= render @article.comments %>  
+<!-- this renders the _comments partial -->
+
+<h2>Add a comment:</h2>
+<%= render 'comments/form' %>
+
 
 <%= link_to 'Back', articles_path %>
 <%= link_to 'Edit article', edit_article_path(article) %>

@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
-  resources :articles #creates all 7 restful routes (CRUD)
+  resources :articles do   #creates all 7 restful routes (CRUD)
+    resources :comments
+  end
+  
   get 'welcome/index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
